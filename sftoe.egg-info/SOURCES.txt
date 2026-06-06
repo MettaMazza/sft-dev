@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+sftoe/__init__.py
+sftoe/core.py
+sftoe/gate.py
+sftoe/proof.py
+sftoe.egg-info/PKG-INFO
+sftoe.egg-info/SOURCES.txt
+sftoe.egg-info/dependency_links.txt
+sftoe.egg-info/top_level.txt
+tests/test_sftoe.py

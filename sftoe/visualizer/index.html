@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFTOE Universe Visualizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- WebGL Canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- Connection Status -->
+  <div id="connection-status">
+    <span id="connection-dot"></span>
+    <span id="connection-text">Connecting…</span>
+  </div>
+
+  <!-- HUD Panel (top-right) -->
+  <div id="hud-panel" class="glass-panel">
+    <div class="hud-header">
+      <span class="hud-title">SFTOE MONITOR</span>
+      <span class="hud-version">v1.0</span>
+    </div>
+    <div class="hud-divider"></div>
+
+    <div class="hud-row">
+      <span class="hud-label">TICK</span>
+      <span class="hud-value" id="hud-tick">0</span>
+    </div>
+    <div class="hud-row">
+      <span class="hud-label">SPEED</span>
+      <span class="hud-value" id="hud-speed">1×</span>
+    </div>
+    <div class="hud-row">
+      <span class="hud-label">PARTICLES</span>
+      <span class="hud-value" id="hud-particle-count">0</span>
+    </div>
+    <div class="hud-row">
+      <span class="hud-label">TOTAL ENERGY</span>
+      <span class="hud-value" id="hud-energy">—</span>
+    </div>
+
+    <div class="hud-divider"></div>
+    <div class="hud-section-title">INVARIANTS</div>
+    <div id="hud-invariants" class="hud-invariants">
+      <div class="invariant-row">
+        <span class="invariant-dot neutral"></span>
+        <span class="invariant-name">Awaiting data…</span>
+      </div>
+    </div>
+
+    <div class="hud-divider"></div>
+    <div class="hud-section-title">EVENT FEED</div>
+    <div id="hud-events" class="hud-events">
+      <div class="event-item dim">No events yet</div>
+    </div>
+  </div>
+
+  <!-- Particle Info Tooltip -->
+  <div id="particle-info" class="glass-panel" style="display:none;">
+    <div class="hud-header">
+      <span class="hud-title" id="info-name">—</span>
+      <button id="info-close" class="info-close-btn">✕</button>
+    </div>
+    <div class="hud-divider"></div>
+    <div class="hud-row"><span class="hud-label">TYPE</span><span class="hud-value" id="info-type">—</span></div>
+    <div class="hud-row"><span class="hud-label">STATE</span><span class="hud-value" id="info-state">—</span></div>
+    <div class="hud-row"><span class="hud-label">MASS</span><span class="hud-value" id="info-mass">—</span></div>
+    <div class="hud-row"><span class="hud-label">GEN</span><span class="hud-value" id="info-gen">—</span></div>
+    <div class="hud-row"><span class="hud-label">POS</span><span class="hud-value" id="info-pos">—</span></div>
+    <div class="hud-row"><span class="hud-label">VEL</span><span class="hud-value" id="info-vel">—</span></div>
+    <div class="hud-row"><span class="hud-label">COLOR</span><span class="hud-value" id="info-color">—</span></div>
+  </div>
+
+  <!-- Camera Mode Indicator -->
+  <div id="camera-mode" class="glass-badge">
+    <span id="camera-mode-text">ORBIT</span>
+    <span class="badge-hint">[F] toggle fly</span>
+  </div>
+
+  <!-- Time Controls (bottom bar) -->
+  <div id="time-bar" class="glass-panel">
+    <button id="btn-step" class="time-btn" title="Step 1 tick">⏭</button>
+    <button id="btn-play" class="time-btn play-btn" title="Play / Pause">▶</button>
+    <div class="speed-control">
+      <label class="speed-label">SPEED</label>
+      <input type="range" id="speed-slider" min="0" max="2" step="0.01" value="0" />
+      <span class="speed-value" id="speed-display">1×</span>
+    </div>
+    <div class="tick-display">
+      <span class="tick-label">TICK</span>
+      <span class="tick-value" id="tick-counter">0</span>
+    </div>
+  </div>
+
+  <!-- Three.js + OrbitControls from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <!-- Main application script -->
+  <script src="main.js"></script>
+</body>
+</html>

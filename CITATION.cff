@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Smithian Fold Theory of Everything"
+authors:
+  - family-names: "Smith"
+    given-names: "Maria"
+    affiliation: "Ernos Labs — Independent Researcher"
+type: software
+license: MIT
+repository-code: "https://github.com/MettaMazza/Smithian-Fold-Theory"
+url: "https://github.com/MettaMazza/Smithian-Fold-Theory"
+abstract: >-
+  A unified theory of everything built from a single axiom — the One — using
+  one operation: the fold (double and cast out the One). From this alone, the
+  framework derives the four fundamental forces, the full Standard-Model
+  particle spectrum, gravity, cosmology, and consciousness as self-observation,
+  with zero free parameters. Every result is proven by construction in a
+  permitted language enforced by a static gate, and confirmed against
+  measurement. The entire corpus reproduces from a single command.
+keywords:
+  - unified field theory
+  - theory of everything
+  - fold theory
+  - axiomatic physics
+  - fine-structure constant
+  - dark matter
+  - quantum gravity
+  - consciousness
+  - open science
+  - reproducible research
+date-released: "2026-06-04"
+version: "1.0.0"

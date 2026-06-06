@@ -1,0 +1,4 @@
+- [x] Implement the first-principles dressing correction check in `sftoe/proof.py`
+- [x] Update `particle_validation.py` to calculate and display the dressed $t/c$ ratio
+- [x] Update `papers/fundamental_constants.tex` with a section on the renormalization group flow and bare-to-dressed transition
+- [x] Run the test suite and verify the validation results
